@@ -1,15 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { HomePage } from './home/homePage'
+import { Header } from './common/header'
 
 function App(): JSX.Element {
     return (
         <Router>
             <AppStyles className="App">
+                <Header />
                 <main>
                     <Switch>
                         <Route path="/">
-                            <div>hello world</div>
+                            <HomePage />
                         </Route>
                     </Switch>
                 </main>
